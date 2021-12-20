@@ -1,4 +1,2 @@
 #!/bin/bash
-$PYFILE = main.py
-python3 $PYFILE
-python3 -c
+python -c "$PYFILE"
