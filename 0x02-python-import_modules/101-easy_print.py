@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from print import a
+    import print
