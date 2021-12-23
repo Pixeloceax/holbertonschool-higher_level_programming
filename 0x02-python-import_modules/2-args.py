@@ -2,7 +2,7 @@
 def print_arg(argv):
     numbers = len(argv) - 1
     if numbers == 0:
-        print("{} argument.".format(numbers))
+        print("{} arguments.".format(numbers))
         return
     else:
         if numbers == 1:
