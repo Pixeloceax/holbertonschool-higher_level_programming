@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-from typing import Counter
-
-
 def divisible_by_2(my_list=[]):
-    sum = []
+    sum = my_list.copy()
     for i in range(len(my_list)):
-        if my_list[i] % 2 == 0:
-            sum.append(True)
+        if my_list[i] % 2:
+            sum[i] = False
         else:
-            sum.append(False)
-        return sum
+            sum[i] = True
+    return sum
