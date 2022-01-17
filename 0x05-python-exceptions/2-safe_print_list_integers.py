@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
-    int_check = 1
+    y = int_check = 1
     for y in range(x):
         if type(my_list[y]) == type(int_check):
             try:
@@ -11,4 +11,4 @@ def safe_print_list_integers(my_list=[], x=0):
         else:
             exit
     print()
-    return(y-1)
+    return(y)
