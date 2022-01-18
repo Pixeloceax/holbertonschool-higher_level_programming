@@ -3,9 +3,10 @@
 
 
 class Square:
-    """class comment"""
+    """class Square"""
     def __init__(self, size):
         """
-            test
+            self: instance of the class
+            size: size
         """
         self.__size = size
