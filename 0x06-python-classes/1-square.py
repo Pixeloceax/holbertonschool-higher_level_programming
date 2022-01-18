@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Module comment"""
+
+
 class Square:
     """class comment"""
     def __init__(self, size):
@@ -7,4 +9,3 @@ class Square:
             test
         """
         self.__size = size
-    
