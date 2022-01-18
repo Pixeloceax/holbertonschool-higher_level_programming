@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 class Square:
+    """
+    comment section
+    """
     def __init__(self, size):
-        """
-        class Square
-        """
         self.__size = size
