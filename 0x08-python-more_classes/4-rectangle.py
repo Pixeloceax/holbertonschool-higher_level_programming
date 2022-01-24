@@ -72,7 +72,7 @@ class Rectangle:
         square = []
         for i in range(self.__height):
             for j in range(self.__width):
-                square.append("{}".format(str(self.print_symbol)))
+                square.append("#")
             if self.__height - 1 != i:
                 square.append("\n")
         return("".join(square))
