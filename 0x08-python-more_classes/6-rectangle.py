@@ -8,7 +8,7 @@ class Rectangle:
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
-        """ 
+        """
         comment
         """
         Rectangle.number_of_instances += 1
@@ -17,14 +17,14 @@ class Rectangle:
 
     @property
     def width(self):
-        """ 
+        """
             comment
         """
         return(self.__width)
 
     @width.setter
     def width(self, value):
-        """ 
+        """
             comment
         """
         if isinstance(value, int) is False:
@@ -35,14 +35,14 @@ class Rectangle:
 
     @property
     def height(self):
-        """ 
+        """
             comment
         """
         return(self.__height)
 
     @height.setter
     def height(self, value):
-        """ 
+        """
             comment
         """
         if isinstance(value, int) is False:
@@ -52,13 +52,13 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """ 
+        """
             comment
         """
         return(self.__width * self.__height)
 
     def perimeter(self):
-        """ 
+        """
             comment
         """
         if self.__width == 0 or self.__height == 0:
@@ -66,7 +66,7 @@ class Rectangle:
         return((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """ 
+        """
             comment
         """
         if self.__width == 0 or self.__height == 0:
@@ -80,14 +80,14 @@ class Rectangle:
         return("".join(square))
 
     def __repr__(self):
-        """ 
+        """
             comment
         """
         tuple = (self.__width, self.__height)
         return("Rectangle{}".format(tuple))
 
     def __repr__(self):
-        """ 
+        """
             comment
         """
         sstr = "Rectangle(" + str(self.__width) + ","
@@ -95,7 +95,7 @@ class Rectangle:
         return sstr
 
     def __del__(self):
-        """ 
+        """
             comment
         """
         Rectangle.number_of_instances -= 1
