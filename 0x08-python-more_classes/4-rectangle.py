@@ -81,6 +81,5 @@ class Rectangle:
         """
             self: instance of the class
         """
-        sstr = "Rectangle(" + str(self.__width) + ","
-        sstr += str(self.__height) + ")"
-        return sstr
+        tuple = (self.__width, self.__height)
+        return("Rectangle{}".format(tuple))
