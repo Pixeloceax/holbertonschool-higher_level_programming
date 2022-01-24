@@ -63,6 +63,9 @@ class Rectangle:
             return 2 * (self.__height + self.__width)
     """class comment"""
     def __str__(self):
+        """
+            comment
+        """
         str = ""
         if self.__width != 0 or self.__height != 0:
             str += "\n".join("#" * self.__width for y in range(self.__height))
