@@ -24,9 +24,9 @@ class Rectangle:
             comment
         """
         if isinstance(value, int) is False:
-            raise TypeError("size must be an integer")
+            raise TypeError("width must be an integer")
         elif value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
     """class comment"""
     @property
@@ -42,9 +42,9 @@ class Rectangle:
             comment
         """
         if isinstance(value, int) is False:
-            raise TypeError("size must be an integer")
+            raise TypeError("height must be an integer")
         elif value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
     """class comment"""
     def area(self):
@@ -65,8 +65,14 @@ class Rectangle:
     def __str__(self):
         """
             self: instance of the class
+            S O Colas
         """
-        str = ""
-        if self.__width != 0 or self.__height != 0:
-            str += "\n".join("#" * self.__width for y in range(self.__height))
-        return str
+        if self.__width == 0 or self.__height == 0:
+            return("")
+        square = []
+        for i in range(self.__height):
+            for j in range(self.__width):
+                square.append("{}".format(str(self.print_symbol)))
+            if self.__height - 1 != i:
+                square.append("\n")
+        return("".join(square))

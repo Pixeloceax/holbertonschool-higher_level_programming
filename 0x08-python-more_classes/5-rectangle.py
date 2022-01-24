@@ -65,11 +65,17 @@ class Rectangle:
     def __str__(self):
         """
             self: instance of the class
+            S O Colas
         """
-        str = ""
-        if self.__width != 0 or self.__height != 0:
-            str += "\n".join("#" * self.__width for y in range(self.__height))
-        return str
+        if self.__width == 0 or self.__height == 0:
+            return("")
+        square = []
+        for i in range(self.__height):
+            for j in range(self.__width):
+                square.append("{}".format(str(self.print_symbol)))
+            if self.__height - 1 != i:
+                square.append("\n")
+        return("".join(square))
     """class comment"""
     def __repr__(self):
         """
