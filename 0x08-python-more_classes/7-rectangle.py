@@ -3,24 +3,26 @@
 
 
 class Rectangle:
+    """class comment"""
+
     number_of_instances = 0
-    print_symbol = '#'
-    """nothing"""
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """
-            comment
+        comment
         """
         Rectangle.number_of_instances += 1
-        self.height = height
         self.width = width
-    """class comment"""
+        self.height = height
+
     @property
     def width(self):
         """
             comment
         """
-        return self.__width
-    """class comment"""
+        return(self.__width)
+
     @width.setter
     def width(self, value):
         """
@@ -28,17 +30,17 @@ class Rectangle:
         """
         if isinstance(value, int) is False:
             raise TypeError("width must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-    """class comment"""
+
     @property
     def height(self):
         """
             comment
         """
-        return self.__height
-    """class comment"""
+        return(self.__height)
+
     @height.setter
     def height(self, value):
         """
@@ -46,30 +48,27 @@ class Rectangle:
         """
         if isinstance(value, int) is False:
             raise TypeError("height must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    """class comment"""
+
     def area(self):
         """
-            self: instance of the class
+            comment
         """
-        return(self.__height * self.__width)
-    """class comment"""
+        return(self.__width * self.__height)
+
     def perimeter(self):
         """
-            self: instance of the class
+            comment
         """
-        if self.__height == 0 or self.__width == 0:
-            return 0
-        else:
-            return 2 * (self.__height + self.__width)
+        if self.__width == 0 or self.__height == 0:
+            return(0)
+        return((self.__width * 2) + (self.__height * 2))
 
-    """class comment"""
     def __str__(self):
         """
-            self: instance of the class
-            S O Colas
+            comment
         """
         if self.__width == 0 or self.__height == 0:
             return("")
@@ -80,18 +79,18 @@ class Rectangle:
             if self.__height - 1 != i:
                 square.append("\n")
         return("".join(square))
-    """class comment"""
+
     def __repr__(self):
         """
-            self: instance of the class
+            comment
         """
         sstr = "Rectangle(" + str(self.__width) + ","
         sstr += str(self.__height) + ")"
         return sstr
-    """class comment"""
+
     def __del__(self):
         """
-            self: instance of the class
+            comment
         """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
