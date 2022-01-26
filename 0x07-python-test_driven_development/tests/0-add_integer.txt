@@ -1,66 +1,47 @@
-The ``test`` module
-======================
+#===============#
+# 0-add_integer #
+#===============#
 
-Using ``add_integer``
--------------------
-
-This is an example text file in reStructuredText format.  First import
-``factorial`` from the ``example`` module:
-
-    >>> add_integer = __import__('0-add_integer').add_integer
-
-Now use it:
-
-    >>> add_integer(1, 2)
-    3
+Importing the module:
+>>> add_integer = __import__('0-add_integer').add_integer
 
 
-
-    >>> add_integer(1.1, 2)
-    3
-
+>>> add_integer(1, 2)
+3
 
 
-    >>> add_integer("string", 1)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+>>> add_integer(1.1, 2)
+3
 
 
+>>> add_integer("string", 1)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(None, "string")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
 
 
-
-    >>> add_integer(None, "string")
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
+>>> add_integer(200.3, -200)
+0
 
 
+>>> add_integer(100, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
 
 
-
-    >>> add_integer(200.3, -200)
-    0
-
-
-
-    >>> add_integer(100, None)
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
+>>> add_integer(float('inf'), 100)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
 
 
-
-
-    >>> add_integer(float('inf'), 100)
-    Traceback (most recent call last):
-    ...
-    OverflowError: cannot convert float infinity to integer
-
-
-
-
-    >>> add_integer(float('NaN'), 100)
-    Traceback (most recent call last):
-    ...
-    ValueError: cannot convert float NaN to integer
+>>> add_integer(float('NaN'), 100)
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
