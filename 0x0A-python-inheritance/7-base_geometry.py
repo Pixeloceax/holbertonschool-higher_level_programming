@@ -14,7 +14,14 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """
-            comment
+        Args:
+            self
+            name
+            value
+        Raises:
+            TypeError
+            ValueError
+        Returns: nothing
         """
         if type(value) is not int:
             raise TypeError(name + " must be an integer")
