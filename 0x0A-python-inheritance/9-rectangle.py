@@ -19,6 +19,9 @@ class Rectangle(BaseGeometry):
         super().integer_validator("height", height)
 
     def area(self):
+        """
+            comment
+        """
         return self.__width * self.__height
 
     def __str__(self):
