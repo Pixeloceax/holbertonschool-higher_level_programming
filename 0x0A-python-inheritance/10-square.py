@@ -48,7 +48,9 @@ class Rectangle(BaseGeometry):
         """
             comment
         """
-        return ("[Rectangle] {:}\{:}".format(self.__height, self.__width))
+        return("[Rectangle] {:d}/{:d}".format(self.__width, self.__height))
+
+
 """comment"""
 
 
@@ -62,15 +64,15 @@ class Square(Rectangle):
         """
         self.__size = size
         super().integer_validator("size", size)
-        
+
     def area(self):
         """
             comment
         """
         return self.__size * self.__size
-    
+
     def __str__(self):
         """
             comment
         """
-        return ("[Rectangle] {:}\{:}".format(self.__size, self.__size))
+        return("[Rectangle] {:d}/{:d}".format(self.__size, self.__size))

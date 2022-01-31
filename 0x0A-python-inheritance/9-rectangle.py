@@ -48,4 +48,4 @@ class Rectangle(BaseGeometry):
         """
             comment
         """
-        return ("[Rectangle] {:}\{:}".format(self.__height, self.__width))
+        return ("[Rectangle] {:d}/{:d}".format(self.__height, self.__width))
