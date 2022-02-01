@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""comment"""
+
+
 def append_write(filename="", text=""):
     """
         comment
