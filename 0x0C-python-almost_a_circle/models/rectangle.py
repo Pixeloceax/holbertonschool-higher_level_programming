@@ -22,7 +22,7 @@ class Rectangle(Base):
         """
             comment
         """
-        return self.width
+        return self.__width
     @width.setter
     def width(self, value):
         """
@@ -41,7 +41,7 @@ class Rectangle(Base):
         """
             comment
         """
-        return self.height
+        return self.__height
     @height.setter
     def height(self, value):
         """
@@ -60,7 +60,7 @@ class Rectangle(Base):
         """
             comment
         """
-        return self.x
+        return self.__x
     @x.setter
     def x(self, value):
         """
@@ -78,7 +78,7 @@ class Rectangle(Base):
         """
             comment
         """
-        return self.y
+        return self.__y
     @y.setter
     def y(self, value):
         """
@@ -98,7 +98,7 @@ class Rectangle(Base):
         print("\n" * self.__y, end="")
         for i in range(self.__height):
             print(" " * self.__x, end="")
-            print("#a" * self.__width)
+            print("#" * self.__width)
 
     def area(self):
         """
@@ -126,3 +126,9 @@ class Rectangle(Base):
             for y, Value in kwargs.items():
                 if y in rectangle_list:
                     setattr(self, y, kwargs[y])
+    
+    def to_dictionary(self):
+        """
+            comment
+        """
+        
