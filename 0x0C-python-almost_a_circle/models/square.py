@@ -49,4 +49,6 @@ class Square(Rectangle):
         """
             comment
         """
-    
+        square_list = ["id", "size", "x", "y"]
+        square_list_self = [self.id,self.size ,self.x, self.y]
+        return(dict(zip(square_list, square_list_self)))

@@ -123,12 +123,14 @@ class Rectangle(Base):
                 setattr(self, rectangle_list[i], args[i])
 
         elif kwargs is not None:
-            for y, Value in kwargs.items():
+            for y, value in kwargs.items():
                 if y in rectangle_list:
                     setattr(self, y, kwargs[y])
-    
+
     def to_dictionary(self):
         """
             comment
         """
-        
+        rectangle_list = ["id", "width", "height", "x", "y"]
+        rectangle_list_self = [self.id, self.width, self.height, self.x, self.y]
+        return(dict(zip(rectangle_list, rectangle_list_self)))
