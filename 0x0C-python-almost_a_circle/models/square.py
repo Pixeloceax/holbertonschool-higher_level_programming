@@ -22,19 +22,19 @@ class Square(Rectangle):
         return(self.width)
 
     @size.setter
-    def size(self, number):
+    def size(self, size):
         """
             comment
         """
-        self.width = number
-        self.height = number
+        self.width = size
+        self.height = size
 
     def __str__(self):
         """
             comment
         """
-        return("[Square] ({}) {}/{} - {}".format
-               (self.id, self.x, self.y, self.width))
+        return("[Square] ({:d}) {:d}/{:d} - {:d}".format(
+                self.id, self.x, self.y, self.size))
 
     def update(self, *args, **kwargs):
         """
