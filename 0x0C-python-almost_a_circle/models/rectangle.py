@@ -20,72 +20,72 @@ class Rectangle(Base):
         """
             comment
         """
-        return self.__width
+        return(self.__width)
 
     @width.setter
-    def width(self, value):
+    def width(self, number):
         """
             comment
         """
-        if isinstance(value, int) is False:
+        if isinstance(number, int) is False:
             raise TypeError("width must be an integer")
-        elif value <= 0:
-            raise TypeError("width must be > 0")
-        self.__width = value
+        if number <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = number
 
     @property
     def height(self):
-        """
+        """f
             comment
         """
-        return self.__height
+        return(self.__height)
 
     @height.setter
-    def height(self, value):
+    def height(self, number):
         """
             comment
         """
-        if isinstance(value, int) is False:
+        if isinstance(number, int) is False:
             raise TypeError("height must be an integer")
-        elif value <= 0:
-            raise TypeError("height must be > 0")
-        self.__height = value
+        if number <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = number
 
     @property
     def x(self):
         """
             comment
         """
-        return self.__x
+        return(self.__x)
 
     @x.setter
-    def x(self, value):
+    def x(self, number):
         """
             comment
         """
-        if isinstance(value, int) is False:
+        if isinstance(number, int) is False:
             raise TypeError("x must be an integer")
-        elif value < 0:
-            raise TypeError("x must be >= 0")
-        self.__x = value
+        if number < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = number
 
     @property
     def y(self):
         """
             comment
         """
-        return self.__y
+        return(self.__y)
 
     @y.setter
-    def y(self, value):
+    def y(self, number):
         """
             comment
         """
-        if isinstance(value, int) is False:
+        if isinstance(number, int) is False:
             raise TypeError("y must be an integer")
-        elif value < 0:
-            raise TypeError("y must be >= 0")
-        self.__y = value
+        if number < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = number
 
     def display(self):
         """
