@@ -17,8 +17,8 @@ class Square(Rectangle):
         """
             comment
         """
-        return("[Square] ({:d}) {:d}/{:d} - {:d}".format(
-                self.id, self.x, self.y, self.size))
+        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(
+                self.id, self.x, self.y, self.size)
 
     @property
     def size(self):
@@ -45,7 +45,7 @@ class Square(Rectangle):
                 setattr(self, rectangle_list[i], args[i])
 
         elif kwargs is not None:
-            for y, size in kwargs.items():
+            for y, value in kwargs.items():
                 if y in rectangle_list:
                     setattr(self, y, kwargs[y])
 
