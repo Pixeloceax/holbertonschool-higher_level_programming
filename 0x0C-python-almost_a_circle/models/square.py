@@ -16,7 +16,7 @@ class Square(Rectangle):
         self.size = size
 
     def __str__(self):
-        """$
+        """
             comment
         """
         return "[Square] ({:d}) {:d}/{:d} - {:d}".format(
@@ -37,7 +37,6 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
-
 
     def update(self, *args, **kwargs):
         """
