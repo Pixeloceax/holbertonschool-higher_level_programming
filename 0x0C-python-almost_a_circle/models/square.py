@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 """comment"""
-
-
-
 from models.rectangle import Rectangle
 
 
@@ -30,14 +27,15 @@ class Square(Rectangle):
             comment
         """
         return("[Square] ({}) {}/{} - {}".format
-        (self.id, self.x,self.y, self.width))
-    def update(self, *args, **kwargs): 
+               (self.id, self.x, self.y, self.width))
+
+    def update(self, *args, **kwargs):
         """
             comment
         """
         rectangle_list = ["id", "size", "x", "y"]
         if args is not None and len(args) != 0:
-            for i in range (len(args)):
+            for i in range(len(args)):
                 setattr(self, rectangle_list[i], args[i])
 
         elif kwargs is not None:
@@ -50,5 +48,5 @@ class Square(Rectangle):
             comment
         """
         square_list = ["id", "size", "x", "y"]
-        square_list_self = [self.id,self.size ,self.x, self.y]
+        square_list_self = [self.id, self.size, self.x, self.y]
         return(dict(zip(square_list, square_list_self)))
