@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""module to print a Square"""
-from pyrsistent import v
+"""comment"""
 from models.rectangle import Rectangle
 
 
@@ -8,6 +7,7 @@ class Square(Rectangle):
     """
         comment
     """
+
     def __init__(self, size, x=0, y=0, id=None):
         """
             comment
@@ -16,26 +16,28 @@ class Square(Rectangle):
         self.size = size
 
     def __str__(self):
-        """
+        """$
             comment
         """
         return "[Square] ({:d}) {:d}/{:d} - {:d}".format(
-                self.id, self.x, self.y, self.size)
+            self.id, self.x, self.y, self.size
+        )
 
     @property
     def size(self):
         """
             comment
         """
-        return(self.width)
+        return self.width
 
     @size.setter
-    def size(self, test):
+    def size(self, value):
         """
             comment
         """
-        self.height = test
-        self.width = test
+        self.width = value
+        self.height = value
+
 
     def update(self, *args, **kwargs):
         """
