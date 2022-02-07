@@ -27,7 +27,7 @@ class Rectangle(Base):
         """
             comment
         """
-        if type(value) is not int:
+        if isinstance(value, int) is False:
             raise TypeError("width must be an integer")
         elif value <= 0:
             raise TypeError("width must be > 0")
@@ -46,7 +46,7 @@ class Rectangle(Base):
         """
             comment
         """
-        if type(value) is not int:
+        if isinstance(value, int) is False:
             raise TypeError("height must be an integer")
         elif value <= 0:
             raise TypeError("height must be > 0")
@@ -65,7 +65,7 @@ class Rectangle(Base):
         """
             comment
         """
-        if type(value) is not int:
+        if isinstance(value, int) is False:
             raise TypeError("x must be an integer")
         elif value < 0:
             raise TypeError("x must be >= 0")
@@ -84,7 +84,7 @@ class Rectangle(Base):
         """
             comment
         """
-        if type(value) is not int:
+        if isinstance(value, int) is False:
             raise TypeError("y must be an integer")
         elif value < 0:
             raise TypeError("y must be >= 0")
