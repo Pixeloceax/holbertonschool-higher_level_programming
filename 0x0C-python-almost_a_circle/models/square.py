@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""comment"""
+"""module to print a Square"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """comment"""
+    """
+        comment
+    """
     def __init__(self, size, x=0, y=0, id=None):
         """
             comment
@@ -16,12 +18,16 @@ class Square(Rectangle):
         """
             comment
         """
-        return self.width
+        return(self.width)
 
     @size.setter
-    def size(self, size):
-        self.width = size
-        self.height = size
+    def size(self, Size):
+        """
+            comment
+        """
+        self.width = Size
+        self.height = Size
+
 
     def __str__(self):
         """
