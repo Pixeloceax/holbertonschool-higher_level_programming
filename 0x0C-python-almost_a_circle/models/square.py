@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """module to print a Square"""
+from pyrsistent import v
 from models.rectangle import Rectangle
 
 
@@ -29,12 +30,12 @@ class Square(Rectangle):
         return(self.width)
 
     @size.setter
-    def size(self, size):
+    def size(self, value):
         """
             comment
         """
-        self.height = size
-        self.width = size
+        self.height = value
+        self.width = value
 
     def update(self, *args, **kwargs):
         """
