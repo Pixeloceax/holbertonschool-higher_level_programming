@@ -4,6 +4,7 @@ import json
 
 
 class Base:
+    """comment"""
     __nb_objects = 0
 
     def __init__(self, id=None):
