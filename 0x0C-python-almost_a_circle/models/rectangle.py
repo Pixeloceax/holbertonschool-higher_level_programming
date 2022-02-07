@@ -10,8 +10,8 @@ class Rectangle(Base):
             comment
         """
         super().__init__(id)
-        self.width = width
         self.height = height
+        self.width = width
         self.x = x
         self.y = y
 
