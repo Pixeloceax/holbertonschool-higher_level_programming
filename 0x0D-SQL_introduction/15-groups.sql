@@ -1,3 +1,6 @@
 -- Number by score
-SELECT SUM(`score`) AS `number`
+SELECT SUM(`score`) 
+COUNT(*) AS `number`
 FROM `second_table`
+GROUP BY `score`
+ORDER BY `number` DESC
