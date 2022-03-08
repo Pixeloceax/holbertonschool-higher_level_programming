@@ -1,4 +1,4 @@
 -- Count 89
 SELECT COUNT(*)
-`first_table`
-id = 89
+FROM `first_table`
+WHERE id = 89
