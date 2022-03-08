@@ -1,5 +1,5 @@
 -- Temperatures #2
-SELECT `state`, MAX(value) AS `max_temp`
+SELECT `State`, MAX(value) AS `max_temp`
 FROM `temperatures`
-GROUP BY `state`
+GROUP BY `State`
 LIMIT 3;
