@@ -1,2 +1,2 @@
 --First table
-CREATE DATABASE first_table;
+CREATE DATABASE IF EXISTS `first_table`;
