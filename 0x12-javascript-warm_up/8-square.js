@@ -8,9 +8,8 @@ if (isNaN(parseInt(n))) {
 } else {
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
-      string += 'X';
+      process.stdout.write('X');
     }
-    string += '\n';
+    console.log('');
   }
-  console.log(string);
 }
