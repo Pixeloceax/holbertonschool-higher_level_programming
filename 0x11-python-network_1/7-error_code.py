@@ -2,10 +2,8 @@
 """
     takes in a URL, sends a request to the URL
 """
-import urllib.request
-import urllib.parse
+
 from sys import argv
-from urllib.error import HTTPError
 import requests
 
 if __name__ == "__main__":
