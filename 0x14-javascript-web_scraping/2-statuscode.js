@@ -1,14 +1,13 @@
 #!/usr/bin/node
 
-const axios = require('axios').default;
+const axios = require('axios');
 
-axios.get(process.argv[2])
-  .then(function (response) {
-    console.log('code:', response.status);
-  })
-  .catch(function (error) {
-    console.error('code:', error.response.status);
-  })
-  .then(function () {
-
+axios({
+  method: 'get',
+  url: process.argv[2]
+})
+  .then((response) => {
+    console.log('code: ' + response.status);
+  }, (error) => {
+    console.log('code: ' + error.response.status);
   });
